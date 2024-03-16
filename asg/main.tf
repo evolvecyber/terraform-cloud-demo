@@ -14,7 +14,7 @@ module "asg" {
   launch_template_description = "Launch template example"
   update_default_version      = true
   user_data                   = base64encode(
-    #!/bin/bash
+    #!/bin/bash,
     sudo yum install httpd -y
   )
   image_id        = data.aws_ami.amazon.id
